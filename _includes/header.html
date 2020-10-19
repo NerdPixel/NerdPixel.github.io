@@ -15,6 +15,10 @@
           <li class="nav-item">
             <a class="nav-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
           </li>
+          {%- if my_page.title -%}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ header_pages | href }}">{{ header_pages.title | escape }}</a>
+          </li>
           {%- endif -%}
         {% endfor -%}
       </ul>
